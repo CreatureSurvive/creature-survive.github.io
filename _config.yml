@@ -1,0 +1,47 @@
+name: Creature Survive
+description: ramblings of a programmer
+meta_description: "ramblings of a programmer, mostly Unity3d related"
+
+aboutPage: true
+
+markdown: redcarpet
+highlighter: pygments
+
+
+paginate: 20
+baseurl: /
+domain_name: 'http://creaturesurvive.github.io'
+google_analytics: 'UA-XXXXXXXX-X'
+disqus: false
+disqus_shortname: 'your-disqus-shortname'
+
+# Details for the RSS feed generator
+url:            'http://creaturesurvive.github.io'
+author:         'Your CreatureSurvive'
+authorTwitter:  'CreatureSurvive'
+
+permalink:       /:year/:title/
+
+defaults:
+    -
+        scope:
+            path: "" # empty string for all files
+            type: pages
+        values:
+            layout: default
+    -
+        scope:
+            path: "" # empty string for all files
+            type: posts
+        values:
+            layout: post
+    -
+        scope:
+            path: ""
+            type: drafts
+        values:
+            layout: post
+
+gems:
+  - jekyll-paginate
+  - jekyll-gist
