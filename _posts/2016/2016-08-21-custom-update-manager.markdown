@@ -9,6 +9,7 @@ published: true
 An Update Manager is nothing more than a list of methods that get called by iterating through that list.
 
 ---
+
 ##### Why Would You Need A Custom Update Manager
 
 a custom update manager can offer your project increased perfomance by
@@ -32,6 +33,7 @@ public class TrackPositions : MonoBehaviour
 Running this test with unity's standard update method results in `2.08605 ms` between each `Update();` call Running the same test using this Update Manager results in `0.21295 ms` between each `Update();` call. this is due to the way unity calls its Magic Methods
 
 ---
+
 ##### How Does Unity Manage It's 'Magic Methods'?
 Writing C# code in unity, is Managed Code. Managed code is code that is converted to a format that is readable by the CLR Common Language Runtime. in this case either Mono or Il2cpp would be the CLR.
 
@@ -42,6 +44,7 @@ unity handles calling Magic Methods from native code however the methods themsel
 So in this scenario calling `Update();` on 5000 GameObjects each frame causes you to pay this overhead 5000 times, however using an Update Manager you can call Update one time in the manager and let the managed code call the 5000 update methods thus the overhead is only payed once.
 
 ---
+
 ##### Creating The Update Manager
 
 handling the classes that will be registered with the update manager is rather simple. all we need to do is create a wrapper for MonoBehaviour. To do this all you need to do is create a new class that inherits from MonoBehaviour.

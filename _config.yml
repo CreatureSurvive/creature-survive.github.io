@@ -5,7 +5,7 @@ meta_description: "ramblings of a programmer, mostly Unity3d related"
 aboutPage: true
 
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 
 
 paginate: 20
