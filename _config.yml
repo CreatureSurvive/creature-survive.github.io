@@ -4,7 +4,7 @@ meta_description: "ramblings of a programmer, mostly Unity3d related"
 
 aboutPage: true
 
-markdown: redcarpet
+markdown: kramdown
 highlighter: pygments
 
 
