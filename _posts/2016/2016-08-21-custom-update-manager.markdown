@@ -51,7 +51,7 @@ handling the classes that will be registered with the update manager is rather s
 
 {% highlight csharp %}
 ```
-public class BaseMonoBehaviour : MonoBehaviour
+public abstract class BaseMonoBehaviour : MonoBehaviour
 {
 
 }
@@ -81,3 +81,25 @@ public class UpdateManager : MonoBehaviour
 }
 ```
 {% endhighlight %}
+
+In order for this to function properly well need to have a way for our `BaseMonoBehaviour`'s to be able to communicate with our `UpdateManager` class. the easiest way of doing this is to use the constructor to declare a static instance.
+
+```csharp
+private static UpdateManager instance;
+
+public UpdateManager()
+{
+    instance = this;
+}
+```
+
+
+The first thing we'll need to do is add some functionality to to add classes to our manager, we'll handle this by adding our classes from within the `Awake()` method. The `Awake` method will be called every time a the class is created. so within our BaseMonoBehaviour class lets create a static `AddEntry() method that will call pass the `BaseMonoBehaviour` to bae added to a list
+
+```csharp
+public static AddEntry(BaseMonoBehaviour behaviour)
+{
+  instance.AddEntryToManager(behaviour);
+}
+
+```
