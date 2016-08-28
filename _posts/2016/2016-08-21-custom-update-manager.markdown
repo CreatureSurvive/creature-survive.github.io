@@ -1,6 +1,7 @@
 ---
 layout: "post"
 title: "Custom Update Manager"
+description: Creating an Update Manager For Unity3d
 date: "2016-08-21 19:36"
 published: true
 ---

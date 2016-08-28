@@ -9,8 +9,8 @@ highlighter: rouge
 
 
 paginate: 20
-baseurl: /
-domain_name: 'http://creaturesurvive.github.io'
+baseurl: /_site/
+domain_name: 'https://creaturesurvive.com'
 google_analytics: 'UA-83007211-1'
 disqus: false
 disqus_shortname: 'your-disqus-shortname'
