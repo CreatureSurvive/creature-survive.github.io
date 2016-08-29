@@ -7,6 +7,17 @@ aboutPage: true
 markdown: kramdown
 highlighter: rouge
 
+#Glynn FTP
+ftp_host: 'ftp.creaturesurvive.com'
+ftp_dir: '/'
+ftp_passive: false
+
+# optional
+ftp_port: 21                  # default 21
+ftp_username: 'creaturesurvive.com'     # default read from stdin
+ftp_password: 'V0mitFire' # default read from stdin
+ftp_secure: false            # default false
+
 
 paginate: 20
 baseurl: /_site/
